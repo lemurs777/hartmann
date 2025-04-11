@@ -9188,7 +9188,6 @@
     }, {
         height: "100%",
         ease: "none",
-        once: true,
         scrollTrigger: {
             trigger: ".decor-step-wrapper",
             start: "top bottom-=100",
@@ -9202,7 +9201,6 @@
         width: "50%",
         duration: .5,
         ease: "power2.out",
-        once: true,
         scrollTrigger: {
             trigger: ".decor-step-wrapper",
             start: "center center",
@@ -9214,7 +9212,6 @@
     }, {
         height: "100%",
         ease: "none",
-        once: true,
         scrollTrigger: {
             trigger: ".decor-step-wrapper",
             start: "bottom bottom",
@@ -9227,11 +9224,10 @@
     }, {
         scale: 1,
         ease: "back.out(1.7)",
-        once: true,
         scrollTrigger: {
             trigger: ".decor-step-wrapper",
             start: "center top",
-            toggleActions: "play none none none"
+            toggleActions: "play none none reverse"
         }
     });
     gsapWithCSS.set(".steps-list li", {
@@ -9240,7 +9236,6 @@
     });
     ScrollTrigger_ScrollTrigger.batch(".steps-list li", {
         start: "top 90%",
-        once: true,
         onEnter: batch => {
             gsapWithCSS.to(batch, {
                 opacity: 1,
