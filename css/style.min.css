@@ -381,6 +381,9 @@
   .mb-20 {
     margin-bottom: calc(var(--spacing) * 20);
   }
+  .mb-\[28px\] {
+    margin-bottom: 28px;
+  }
   .mb-\[60px\] {
     margin-bottom: 60px;
   }
@@ -744,6 +747,9 @@
   .pr-3 {
     padding-right: calc(var(--spacing) * 3);
   }
+  .pb-0 {
+    padding-bottom: calc(var(--spacing) * 0);
+  }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
   }
@@ -972,11 +978,6 @@
       margin-bottom: calc(var(--spacing) * 10);
     }
   }
-  .md\:mb-12 {
-    @media (width >= 48rem) {
-      margin-bottom: calc(var(--spacing) * 12);
-    }
-  }
   .md\:mb-15 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 15);
@@ -1000,6 +1001,11 @@
   .md\:ml-14 {
     @media (width >= 48rem) {
       margin-left: calc(var(--spacing) * 14);
+    }
+  }
+  .md\:min-h-6\.5 {
+    @media (width >= 48rem) {
+      min-height: calc(var(--spacing) * 6.5);
     }
   }
   .md\:max-w-\[300px\] {
@@ -1229,14 +1235,14 @@
       margin-bottom: calc(var(--spacing) * 20);
     }
   }
-  .lg\:mb-28 {
-    @media (width >= 64rem) {
-      margin-bottom: calc(var(--spacing) * 28);
-    }
-  }
   .lg\:mb-\[18px\] {
     @media (width >= 64rem) {
       margin-bottom: 18px;
+    }
+  }
+  .lg\:mb-\[35px\] {
+    @media (width >= 64rem) {
+      margin-bottom: 35px;
     }
   }
   .lg\:mb-\[45px\] {
@@ -1627,6 +1633,11 @@
       font-size: 70px;
     }
   }
+  .lg\:text-\[80px\] {
+    @media (width >= 64rem) {
+      font-size: 80px;
+    }
+  }
   .lg\:leading-\[1\.83\] {
     @media (width >= 64rem) {
       --tw-leading: 1.83;
@@ -1943,17 +1954,12 @@ ol.approach-steps>li:nth-child(even)::before {
 .faq .spollers__item:nth-child(n+6) {
   display: none;
 }
-.faq .more-questions span:last-child {
-  display: none;
-}
 .faq .spollers.show .spollers__item:nth-child(n+6) {
   display: block;
 }
-.faq .more-questions.more span {
-  display: none;
-}
-.faq .more-questions.more span:last-child {
-  display: block;
+.faq .more-questions.more {
+  opacity: 0;
+  pointer-events: none;
 }
 .reviews-slider,.report-slider,.marquee-container {
   position: relative;
